@@ -1,5 +1,9 @@
-tasks = []
-def add_task():
+
+def listOfTasks():
+    tasks = []
+    return tasks
+    
+def add_task(tasks):
     """
     Adding Tasks to the list
     """
@@ -28,7 +32,9 @@ def add_task():
     """
 
     
-def view_task():
+def view_task(tasks):
+    # this is then the calling of the list of tasks
+    tasks = listOfTasks()
 
     """
     View tasks from the list
@@ -56,10 +62,10 @@ def main():
 
         choice = int(input("Enter your choice: "))
         if choice == 1:
-            add_task()
+            add_task(tasks)
            
         elif choice == 2:
-           view_task()  
+           view_task(tasks)  
         elif choice == 3:
             break
         else:
